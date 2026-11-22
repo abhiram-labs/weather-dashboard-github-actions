@@ -5,7 +5,8 @@ name: Deployment
 on:
  push:
    branches: [main]
-   paths: ".github/workflows/cicd-deployment.yml"
+   paths: 
+    - ".github/workflows/cicd-deployment.yml"
 
 jobs:
   greet:
