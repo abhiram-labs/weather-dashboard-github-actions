@@ -1,0 +1,14 @@
+# Goal: To say Hello World and tell the title / Name of the repository
+
+name: Hello
+
+on:
+ push:
+   branches: [main]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
