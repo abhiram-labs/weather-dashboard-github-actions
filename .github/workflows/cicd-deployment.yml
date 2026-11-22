@@ -1,6 +1,6 @@
 # Goal: To display Continuous Integration and Continuous Deployment
 
-name: Deployment
+name: Deployment Workflow
 
 on:
  push:
