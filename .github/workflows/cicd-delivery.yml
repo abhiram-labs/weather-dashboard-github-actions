@@ -1,6 +1,6 @@
-# Goal: to say Happy and tell the Name / title of the repository
+# Goal: To Continuous Integration and Continuous Delivery
 
-name: Happy
+name: Delivery Workflow
 
 on:
   workflow_dispatch: 
@@ -9,5 +9,5 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Happy
-        run: echo "Happy"
+      - name: Delivery
+        run: echo "Continuous Integration and Continuous Delivery"
