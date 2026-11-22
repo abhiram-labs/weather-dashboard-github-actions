@@ -1,14 +1,15 @@
-# Goal: To say Hello World and tell the title / Name of the repository
+# Goal: To display Continuous Integration and Continuous Deployment
 
-name: Hello
+name: Deployment
 
 on:
  push:
    branches: [main]
+   paths: ".github/workflows/cicd-deployment.yml"
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
-        run: echo "Hello World"
+      - name: Deployment 
+        run: echo "Continuous Integration and Continuous Deployment"
