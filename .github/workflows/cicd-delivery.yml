@@ -1,0 +1,13 @@
+# Goal: to say Happy and tell the Name / title of the repository
+
+name: Happy
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Happy
+        run: echo "Happy"
