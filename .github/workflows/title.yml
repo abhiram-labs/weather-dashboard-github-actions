@@ -1,0 +1,18 @@
+# Goal: To Display the Title of GitHub Repository
+
+name: Github Repo Title
+
+on:
+  push:
+    branches:
+      - main
+    paths: 
+      - ".github/workflows/title.yml"
+
+jobs:
+  display-title:
+    runs-on: macos-latest
+    steps:
+      - name: Display Title
+      run: echo "${{ github.event.repository.name }}"
+    
