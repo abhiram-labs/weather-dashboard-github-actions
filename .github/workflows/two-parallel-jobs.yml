@@ -1,0 +1,23 @@
+# Goal: to run two jobs in parallel
+
+name: Two Jobs Parallel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/two-parallel-jobs.yml"
+
+jobs:
+
+  message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say GitHub
+        run: echo "I am using Github"
+
+  title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Repo Title Name
+        run: echo "${{github.event.repository.name}}"
