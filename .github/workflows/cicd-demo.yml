@@ -1,0 +1,37 @@
+# Goal: To build a CI/CD pipeline (just dummy)
+name: CICD Demo
+
+on:
+  push:
+    # paths: ".github/workflows/cicd-demo.yml"
+    
+jobs:
+
+  # CI
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone code
+        run: echo "code cloned"
+        
+  build:
+    needs: code
+    runs-on: ubuntu-latest
+    steps:
+      - name: build code using Docker
+        run: echo "code built"
+        
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the aplication
+        run: echo "test passed"
+        
+  # CD      
+  deploy:
+    needs: [code, build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the app on server
+        run: echo "application deployed"
