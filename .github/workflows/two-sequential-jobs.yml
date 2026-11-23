@@ -1,0 +1,23 @@
+# Goal: To run two jobs sequentially.
+
+Name: Run Jobs Sequentially
+
+on:
+  push:
+    branches: [main]
+    paths: ".github/workflows/two-sequential-jobs.yml"
+
+jobs:
+
+  message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say GitHub
+        run: echo "I am using Github"
+
+  title:
+    needs: message
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Repo Title Name
+        run: echo "${{github.event.repository.name}}"
