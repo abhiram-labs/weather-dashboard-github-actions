@@ -14,5 +14,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Display Title
-      run: echo "${{ github.event.repository.name }}"
+        run: echo "${{ github.event.repository.name }}"
     
