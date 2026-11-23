@@ -1,0 +1,14 @@
+name: Show Env variables
+
+on:
+  workflow_dispatch:
+
+env:
+  NAME: DevOps Engineer
+
+jobs:
+  show_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show plain text env
+        run: echo "I am a ${{env.NAME}}"
