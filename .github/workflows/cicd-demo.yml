@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone code
-        run: echo "code cloned"
+        # run: echo "code cloned"
+        uses: actions/checkout@v4
         
   build:
     needs: code
