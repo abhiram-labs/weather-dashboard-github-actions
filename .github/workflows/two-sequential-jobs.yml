@@ -1,6 +1,6 @@
 # Goal: To run two jobs sequentially.
 
-Name: Run Jobs Sequentially
+name: Run Jobs Sequentially
 
 on:
   push:
