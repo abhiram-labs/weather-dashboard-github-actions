@@ -2,6 +2,15 @@ name: Show Env variables
 
 on:
   workflow_dispatch:
+    inputs:
+      environments:
+        description: Select the environment you want
+        required: true
+        type: choice
+        options:
+          - dev
+          - stg
+          - prod
 
 env:
   NAME: DevOps Engineer
