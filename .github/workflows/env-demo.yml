@@ -3,7 +3,7 @@ name: Show Env variables
 on:
   workflow_dispatch:
     inputs:
-      environments:
+      environment:
         description: Select the environment you want
         required: true
         type: choice
@@ -21,7 +21,12 @@ jobs:
     steps:
       - name: Show plain text env
         run: echo "I am a ${{env.NAME}}"
+        
       - name: Show Secrets
         run: echo "One fun secret is ${{secrets.MY_SECRET}}"
+      
       - name: Show DockerHub Username
         run: echo "DockerHub username is ${{vars.DOCKERHUB_USERNAME}}"
+      
+      - name: show the input environment selected
+        run: echo "The selected env is $${{inputs.environment}}"
